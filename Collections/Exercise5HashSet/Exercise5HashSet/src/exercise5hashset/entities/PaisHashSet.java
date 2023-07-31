@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package exercise5.entities;
+package exercise5hashset.entities;
 
 import java.util.Objects;
 
@@ -11,15 +11,15 @@ import java.util.Objects;
  *
  * @author Daniel Plasencia
  */
-public class Pais implements Comparable<Pais>{
+public class PaisHashSet {
 
     private String nombre;
 
-    public Pais(String nombre) {
+    public PaisHashSet(String nombre) {
         this.nombre = nombre;
     }
 
-    public Pais() {
+    public PaisHashSet() {
     }
 
     public String getNombre() {
@@ -48,7 +48,7 @@ public class Pais implements Comparable<Pais>{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Pais other = (Pais) obj;
+        final PaisHashSet other = (PaisHashSet) obj;
         if (!Objects.equals(this.nombre, other.nombre)) {
             return false;
         }
@@ -60,10 +60,6 @@ public class Pais implements Comparable<Pais>{
         return "Pais{" + "nombre=" + nombre + '}';
     }
 
-    
-    @Override
-    public int compareTo(Pais t) {
-        return this.nombre.compareTo(t.getNombre());
-    }
+
 
 }
